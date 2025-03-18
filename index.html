@@ -628,14 +628,13 @@
                 if (webData.hasOwnProperty(key)) {
 
                     // The following keys are commented out so that they do not display on the website
-                    // if (key === "project_id" ||
-                    //     key === "auth_uri" ||
-                    //     key === "token_uri" ||
-                    //     key === "auth_provider_x509_cert_url" ||
-                    //     key === "javascript_origins") {
-                    //     // Skipping displaying this key as per instructions
-                    //     continue;
-                    // }
+                    if (key === "project_id" ||
+                        key === "auth_uri" ||
+                        key === "token_uri" ||
+                        key === "auth_provider_x509_cert_url" ||
+                        key === "javascript_origins") {
+                        continue;
+                    }
 
                     if (Array.isArray(webData[key])) {
                         webData[key].forEach((item, index) => {
